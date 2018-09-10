@@ -1,5 +1,6 @@
 package nl.isential.training.backend.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,11 +13,12 @@ public class Winkel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
 	
-	String naamWinkel;
+	@Column
+	private String naamWinkel;
 	
-	Boolean isService;
+	private Boolean isService;
 	
-	int aantalSterren;
+	private int aantalSterren;
 
 	public Long getId() {
 		return id;
